@@ -73,4 +73,19 @@ double gRec(unsigned i) {
 
 double gStack(unsigned i) {
     // TODO
+  ArrayStack<unsigned> s(i+1);
+
+  while (i > 0) {
+    s.push(i);
+    --i;
+  }
+
+  double out = 3.2;
+  
+  while (!s.isEmpty()) {
+    s.pop();
+    out += 1.1;
+  }
+
+  return out;
 }
